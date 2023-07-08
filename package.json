@@ -3,9 +3,6 @@
   "version": "1.0.1",
   "description": "Add a class prefix to further sandbox CSS styling for third-party imports.",
   "main": "index.js",
-  "scripts": {
-    "test": "mocha test"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/johnotander/gulp-class-prefix.git"
@@ -25,12 +22,12 @@
   },
   "homepage": "https://github.com/johnotander/gulp-class-prefix",
   "dependencies": {
-    "rework": "^1.0.1",
-    "rework-class-prefix": "1.0.1",
-    "through2": "^0.6.3"
+    "through2": "^0.6.3",
+    "has-class-selector": "0.0.1",
+    "is-present": "0.0.1",
+    "rework": "^1.0.1"
   },
   "devDependencies": {
-    "gulp-util": "^3.0.1",
-    "mocha": "^2.1.0"
+    "gulp-util": "^3.0.1"
   }
 }

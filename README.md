@@ -1,37 +1,22 @@
-# gulp-class-prefix [![Build Status](https://travis-ci.org/johnotander/gulp-class-prefix.svg?branch=master)](https://travis-ci.org/johnotander/gulp-class-prefix)
+# gulp-dynamic-class-container
 
-Gulp plugin to prefix classes in a CSS file.
+Gulp plugin to dynamically add parent/container class to generated CSS.
 
 ## Installation
 
 ```
-npm install --save gulp-class-prefix
+npm install --save gulp-dynamic-class-container
 ```
 
-## Usage
+### Using the `insertInMiddle` option:
 
 ```js
 var gulp        = require('gulp'),
-    classPrefix = require('gulp-class-prefix');
+    classPrefix = require('gulp-dynamic-class-container');
 
 gulp.task('prefix', function() {
   return gulp.src('my-file.css')
-    .pipe(classPrefix('my-class-prefix-'))
-    .pipe(gulp.dest('dist'));
-});
-
-gulp.task('default', ['prefix']);
-```
-
-### Using the `ignored` option:
-
-```js
-var gulp        = require('gulp'),
-    classPrefix = require('gulp-class-prefix');
-
-gulp.task('prefix', function() {
-  return gulp.src('my-file.css')
-  .pipe(classPrefix('my-class-prefix-', { ignored: [/\.ng-/, '.some-class'] }))
+  .pipe(classPrefix('.containerClass', {insertInMiddle:["body", "html"]}))
   .pipe(gulp.dest('dist'));
 });
 
@@ -45,13 +30,6 @@ MIT
 ## Acknowledgements
 
 Gulp wrapper for <https://github.com/johnotander/rework-class-prefix>.
+Original implementation with some limited capability <https://github.com/johno/gulp-class-prefix>.
 
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
-
-Crafted with <3 by [John Otander](http://johnotander.com) ([@4lpine](https://twitter.com/4lpine)).
+Crafted with <3 by Primoz Skerbis
