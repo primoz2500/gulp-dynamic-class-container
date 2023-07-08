@@ -1,11 +1,11 @@
 {
-  "name": "gulp-class-prefix",
-  "version": "1.0.1",
-  "description": "Add a class prefix to further sandbox CSS styling for third-party imports.",
+  "name": "gulp-dynamic-class-container",
+  "version": "1.0.0",
+  "description": "Add a class container to further sandbox CSS styling for third-party imports.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/johnotander/gulp-class-prefix.git"
+    "url": "https://github.com/primoz2500/gulp-dynamic-class-container"
   },
   "keywords": [
     "gulp",
@@ -13,14 +13,13 @@
     "prefix",
     "class",
     "css",
-    "rework"
+    "rework",
+    "class container",
+    "css container"
   ],
-  "author": "John Otander",
+  "author": "Primoz Skerbis",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/johnotander/gulp-class-prefix/issues"
-  },
-  "homepage": "https://github.com/johnotander/gulp-class-prefix",
+  "homepage": "https://github.com/primoz2500/gulp-dynamic-class-container",
   "dependencies": {
     "through2": "^0.6.3",
     "has-class-selector": "0.0.1",
