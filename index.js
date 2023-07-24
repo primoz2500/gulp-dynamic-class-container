@@ -28,18 +28,12 @@ function classPrefix(prefix, options) {
 
         if (hasClassSelector(selector)) {
           // Ensure that the selector doesn't match the ignored list
-          if (isPresent(ignored)) {
-            shouldIgnore = ignored.some(function(opt) {
-              if (typeof opt == 'string') {
-                return selector === opt;
-              } else if (opt instanceof RegExp) {
-                return opt.exec(selector);
+          if(ignored && ignored.length > 0) {
+            for(let i=0; i<ignored.length; i++) {
+              if(selector.startsWith(ignored[i])) {
+                return selector;
               }
-            });
-          }
-
-          if(shouldIgnore) {
-            return selector;
+            }
           }
 
           if(insertInMiddle && insertInMiddle.length > 0) {
