@@ -1,6 +1,6 @@
 {
   "name": "gulp-dynamic-class-container",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Add a class container to further sandbox CSS styling for third-party imports.",
   "main": "index.js",
   "repository": {
